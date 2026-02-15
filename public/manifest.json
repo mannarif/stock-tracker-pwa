@@ -1,0 +1,8 @@
+{
+  "name": "Stock Tracker PWA",
+  "short_name": "Stocks",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea"
+}
