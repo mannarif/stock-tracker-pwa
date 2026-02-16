@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchStockPrice } from "../api/stocks";
+import { fetchLivePrice } from "../api/stocks";
 
 export default function StockCard({ symbol }) {
   const [price, setPrice] = useState(null);
@@ -8,7 +8,7 @@ export default function StockCard({ symbol }) {
     let interval;
 
     async function loadPrice() {
-      const p = await fetchStockPrice(symbol);
+      const p = await fetchLivePrice(symbol);
       setPrice(p);
     }
 
