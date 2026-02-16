@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { fetchStockPrice } from "../api/stocks";
+import { fetchLivePrice } from "../api/stocks";
 
 export default function StockRow({ stock, onRemove }) {
   const [price, setPrice] = useState(0);
 
   useEffect(() => {
     const load = async () => {
-      const p = await fetchStockPrice(stock.symbol);
+      const p = await fetchLivePrice(stock.symbol);
       setPrice(p);
     };
 
